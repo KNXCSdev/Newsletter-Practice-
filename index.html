@@ -9,6 +9,7 @@
 
     <title>Frontend Mentor | Newsletter sign-up form with success message</title>
     <link rel="stylesheet" href="css/main.css" />
+    <script defer src="main.js"></script>
   </head>
   <body>
     <div class="container active">
@@ -30,7 +31,11 @@
         </ul>
 
         <div class="cta">
-          <label for="email" class="cta-label">Email address</label>
+          <div class="cta-labels">
+            <label for="email" class="cta-label">Email address</label
+            ><label for="email" class="cta-label cta-label-invalid">Valid Email required</label>
+          </div>
+
           <input
             type="email"
             required
@@ -53,7 +58,7 @@
         A confirmation email has been sent to <span class="email-owner">ash@loremcompany.com</span>.
         Please open it and click the button to confirm your subscription.
       </p>
-      <button class="confirmation-btn">Dismiss message</button>
+      <button class="btn">Dismiss message</button>
     </div>
   </body>
 </html>

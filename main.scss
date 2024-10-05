@@ -1,5 +1,6 @@
 :root {
   --Tomato: hsl(4, 100%, 66%);
+  --Tomatoop: hsla(4, 100%, 66%, 0.404);
   --orange: hsl(14, 53%, 51%);
   --linear: linear-gradient(to right, var(--Tomato), var(--orange));
   --DarkSlateGrey: hsl(234, 29%, 20%);
@@ -54,17 +55,8 @@ body {
   color: var(--White);
   border: none;
   border-radius: 5px;
-}
-
-.confirmation-btn {
-  padding: 1.7rem;
-  background-color: var(--DarkSlateGrey);
-  font-weight: 700;
-  color: var(--White);
-  border: none;
-  border-radius: 5px;
+  cursor: pointer;
   width: 100%;
-
   &:hover {
     background-image: var(--linear);
     box-shadow: 0 5px 24px var(--Tomato);
@@ -102,8 +94,16 @@ body {
     display: inline-block;
     font-weight: 700;
     font-size: 1.3rem;
-  }
 
+    &-invalid {
+      color: var(--Tomato);
+      opacity: 0;
+    }
+  }
+  &-labels {
+    display: flex;
+    justify-content: space-between;
+  }
   &-email {
     display: inline-block;
     padding: 1.6rem;
@@ -113,7 +113,7 @@ body {
     color: var(--Grey);
     font-family: sans-serif;
     margin-bottom: 1rem;
-    ::placeholder {
+    &::placeholder {
       color: inherit;
       font-family: inherit;
     }
@@ -146,4 +146,31 @@ body {
 
 .hidden {
   display: none;
+}
+
+@media only screen and (max-width: 40em) {
+  html {
+    font-size: 55%;
+  }
+  .container {
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+  }
+  .form {
+    order: 2;
+    padding: 2rem;
+    height: 50rem;
+  }
+  .primary-heading {
+    font-size: 4rem;
+  }
+  .image {
+    width: 100%;
+    img {
+      width: 100%;
+      object-fit: cover;
+      height: 30rem;
+    }
+  }
 }
