@@ -1,0 +1,149 @@
+:root {
+  --Tomato: hsl(4, 100%, 66%);
+  --orange: hsl(14, 53%, 51%);
+  --linear: linear-gradient(to right, var(--Tomato), var(--orange));
+  --DarkSlateGrey: hsl(234, 29%, 20%);
+  --CharcoalGrey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+}
+html {
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  line-height: 1;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--CharcoalGrey);
+  font-size: 1.6rem;
+  color: var(--DarkSlateGrey);
+}
+.container {
+  max-width: 110rem;
+  display: flex;
+  padding: 2rem;
+  background-color: var(--White);
+  border-radius: 20px;
+  align-items: center;
+}
+
+.primary-heading {
+  font-size: 6rem;
+  margin-bottom: 2.4rem;
+}
+
+.secondary-heading {
+  font-size: 4rem;
+  margin-bottom: 2.4rem;
+  font-weight: 700;
+}
+
+.btn {
+  padding: 1.7rem;
+  background-color: var(--DarkSlateGrey);
+  font-weight: 700;
+  color: var(--White);
+  border: none;
+  border-radius: 5px;
+}
+
+.confirmation-btn {
+  padding: 1.7rem;
+  background-color: var(--DarkSlateGrey);
+  font-weight: 700;
+  color: var(--White);
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+
+  &:hover {
+    background-image: var(--linear);
+    box-shadow: 0 5px 24px var(--Tomato);
+    cursor: pointer;
+  }
+}
+
+.form {
+  padding: 0 4rem;
+  flex: 50%;
+  &-description {
+    line-height: 1.6;
+    margin-bottom: 2.4rem;
+    font-weight: 00;
+  }
+  &-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 4.8rem;
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+  }
+}
+.cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  &-label {
+    margin-bottom: -1rem;
+    display: inline-block;
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  &-email {
+    display: inline-block;
+    padding: 1.6rem;
+    border-radius: 5px;
+    border: none;
+    outline: 0.1px solid var(--Grey);
+    color: var(--Grey);
+    font-family: sans-serif;
+    margin-bottom: 1rem;
+    ::placeholder {
+      color: inherit;
+      font-family: inherit;
+    }
+  }
+}
+.image {
+  flex: 35%;
+  img {
+    width: 100%;
+  }
+}
+
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 3rem 5rem;
+  background-color: var(--White);
+  border-radius: 25px;
+  max-width: 40rem;
+  height: 42rem;
+  img {
+    height: 5rem;
+    margin-bottom: 4rem;
+  }
+  &-description {
+    margin-bottom: 3rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
