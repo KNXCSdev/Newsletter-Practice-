@@ -8,12 +8,12 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
 
     <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <!-- Sign-up form start -->
-    <div class="container">
+    <div class="container active">
       <div class="form">
-        <h1>Stay updated!</h1>
+        <h1 class="primary-heading">Stay updated!</h1>
         <p class="form-description">Join 60,000+ product managers receiving monthly updates on:</p>
         <ul class="form-list">
           <li class="form-list-item">
@@ -29,23 +29,31 @@
           </li>
         </ul>
 
-        <label for="email">Email address</label>
-        <input type="email" required placeholder="email@company.com" id="email" />
-        <button class="btn">Subscribe to monthly newsletter</button>
+        <div class="cta">
+          <label for="email" class="cta-label">Email address</label>
+          <input
+            type="email"
+            required
+            placeholder="email@company.com"
+            id="email"
+            class="cta-email"
+          />
+          <button class="btn">Subscribe to monthly newsletter</button>
+        </div>
       </div>
       <div class="image">
         <img src="assets/images/illustration-sign-up-desktop.svg" alt="" />
       </div>
     </div>
+
+    <div class="confirmation hidden">
+      <img src="assets/images/icon-success.svg" alt="" />
+      <h2 class="secondary-heading">Thanks for subscribing!</h2>
+      <p class="confirmation-description">
+        A confirmation email has been sent to <span class="email-owner">ash@loremcompany.com</span>.
+        Please open it and click the button to confirm your subscription.
+      </p>
+      <button class="confirmation-btn">Dismiss message</button>
+    </div>
   </body>
 </html>
-<!-- 
-<div class="confirmation">
-  <img src="assets/images/icon-success.svg" alt="" />
-  <h2 class="secondary-heading">Thanks for subscribing!</h2>
-  <p class="confirmation-description">
-    A confirmation email has been sent to <span class="email-owner">ash@loremcompany.com</span>.
-    Please open it and click the button to confirm your subscription.
-  </p>
-  <button class="btn">Dismiss message</button>
-</div> -->
